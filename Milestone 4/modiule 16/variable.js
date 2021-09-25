@@ -1,0 +1,10 @@
+var member = 7; 
+var friend = 10;
+var team = 11;
+var distance = 20;
+var weight = 49;
+var name = "Akash Miah";
+var univarsity = "SAU";
+var address = "Narsingdi";
+var like = true;
+var like = false;

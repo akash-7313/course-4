@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+</head>
+<body>
+    <section>
+        <h1 onclick="alert('fth xcrtg rtgy')">mi ndjye kud kuyd </h1>
+        <button onclick="alert('gvtbhynbtn')">click alert</button>
+        <button onclick="console.log(54)">click console</button>
+    </section>
+
+    <br><br>
+
+    <section>
+        <!-- direct event -->
+        <button onclick="document.body.style.backgroundColor='red'">click:red</button>
+        <!-- funtion call event -->
+        <button onclick="makeGreen()">click:green</button>
+        <!-- event by id -->
+        <button id="blue">click:blue</button>
+        <!-- event by anonymous function -->
+        <button id="yellow">click:yellow</button>
+        <!-- event listener -->
+        <button id="golden-rod">click: golden rod</button>
+        <!-- anonymous event listener -->
+        <button id="pink">click:pink</button>
+        <!-- shortcut event listener -->
+        <button id="light-blue">click:light blue</button>
+    </section>
+
+    <br><br>
+
+
+    
+    <section>
+        <p id="inner-text"></p>
+        <button onclick="addText ()">click:text</button>
+        <button id="event-text">click: event-text</button>
+    </section>
+
+    <br><br>
+
+    <!-- add comment -->
+    <section>
+        <div id="updated-comment">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quasi sequi architecto unde minima in reprehenderit facilis, pariatur expedita porro, fugit obcaecati magni, ex mollitia quidem? Modi dolorum officiis impedit.</p>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam exercitationem eaque voluptatibus deserunt accusantium ducimus quisquam aliquam est delectus a iste perferendis, sed dignissimos ullam architecto, fugiat reiciendis, minima laboriosam.</p>
+        </div>
+        
+        <div>
+            <textarea name="" id="comment" cols="50" rows="5"></textarea>
+            <br>
+            <button id="post">post</button>
+        </div>
+    
+    </section>
+
+
+<!-- 
+document.getElementById('post').addEventListener('click',function() {
+var box = document.getElementById('comment');
+console.log(box.value);
+
+var p = document.createElement('p');
+p.innerText= box.value;
+
+var adding = document.getElementById('updated-comment');
+adding.appendChild(p);
+
+box.value='';
+}) -->
+
+
+    <br><br>
+
+    <section>
+        <p id="updated-text"></p>
+        <input id="name-field" type="text">
+        <button id="update">update</button>
+    </section>
+
+<!-- js code start -->
+    <script>
+        // 
+        function addText () {
+            var p = document.getElementById('inner-text');
+            p.innerText='asdf ghjkk l qwe rty yui op';
+        }
+
+        // 
+        document.getElementById('event-text').addEventListener('click', function() {
+            var p = document.getElementById('inner-text');
+            p.innerText='bangladesh';
+        })
+
+        // 
+        document.getElementById('update').addEventListener('click', function() {
+            var nameField = document.getElementById('name-field');
+            // console.log(nameField);
+            var p = document.getElementById('updated-text');
+            p.innerText = nameField.value;
+            nameField.value='';
+        })
+
+
+    </script>
+    <script src="comment.js"></script>
+    <script src="event.js"></script>
+</body>
+</html>

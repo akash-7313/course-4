@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event delegate</title>
+</head>
+<>
+    <ul id="li-container">
+        <h3>Lorem ipsum dolor sit.</h3>
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Distinctio, voluptatibus consequatur!</li>
+        <li class="item">Vel, est. Nobis.</li>
+        <li class="item">Ullam, maxime assumenda?</li>
+        <li class="item">Hic, porro maiores!</li>
+    </ul>
+    <button id="add-item">add li</button>
+
+
+    <script>
+        // var items = document.getElementsByClassName('item');
+        // // console.log(items);
+        // for(var item of items) {
+        //     // console.log(item);
+        //     item.addEventListener('click', function(event) {
+        //         // console.log(event.target);
+        //         var parent = event.target.parentNode;
+        //         // console.log(parent);
+        //         parent.removeChild(event.target);
+        //         // event.target.parentNode.removeChild(event.target);
+        //     })
+        // }
+
+
+        // event delegate
+        document.getElementById('li-container').addEventListener('click',function(event) {
+            // console.log(event);
+            // console.log(event.target);
+            // console.log(event.target.parentNode);
+            event.target.parentNode.removeChild(event.target);
+        })
+        document.getElementById('add-item').addEventListener('click', function() {
+            var createList = document.createElement('li');
+            // createList.classList.add('item');
+            createList.innerText='new list item';
+            var parentCall = document.getElementById('li-container');
+            parentCall.appendChild(createList);
+        })
+       
+
+    </script>
+
+
+<!-- practice -->
+    <!-- delegate -->
+    <!-- <section>
+        <div id="container">
+            <ul id="li-container">
+                <h3>Delegated ul list</h3>
+                <li class="item">Lorem ipsum dolor sit amet.</li>
+                <li class="item">Architecto culpa temporibus doloribus voluptate?</li>
+                <li class="item">Cum similique labore animi pariatur?</li>
+                <li class="item">Soluta error incidunt laboriosam ullam?</li>
+                <li class="item">Voluptatum mollitia corrupti ut magnam!</li>
+            </ul>
+            <button id="add">add-item</button>
+        </div>
+    </section> -->
+
+    <script>
+        // add new item
+        // document.getElementById('add').addEventListener('click', function () {
+        //     var createList = document.createElement('li');
+        //     createList.innerText = 'new item,added by me';
+        //     var parentCall = document.getElementById('li-container');
+        //     parentCall.appendChild(createList);
+        // })
+
+        // delete each item
+        // document.getElementById('li-container').addEventListener('click', function (event) {
+        //     var deleteItem = event.target.parentNode;
+        //     deleteItem.removeChild(event.target);
+        // })
+    </script>
+
+
+
+</body>
+</html>

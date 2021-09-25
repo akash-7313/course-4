@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .i{
+            height: 600px;
+            border: 1px solid black;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: stretch;
+        }
+        .s-box{
+            width: 200px;
+            
+            font-size: 3em;
+            border: 5px dotted blue;
+        }
+        #box-2{
+            flex-grow: 1;
+            order: 1;
+        }
+        #box-1{
+            order: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">i</h1>
+    <div class="i">
+        <div id="box-1" class="s-box">box-1</div>
+        <div id="box-2" class="s-box">box-2</div>
+    </div>
+</body>
+</html>

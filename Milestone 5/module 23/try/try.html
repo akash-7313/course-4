@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello JS</title>
+    <link rel="stylesheet" href="try.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1 id="blog-head">Blogging</h1>
+        <section id="section">
+            <article class="blog">
+                <h3 id="fir">blog-1</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi alias quibusdam dolores libero autem iste culpa in repellendus corporis debitis mollitia sed, nemo reprehenderit tenetur accusamus veniam! Nam inventore necessitatibus expedita dolore possimus aliquid rem corrupti esse deserunt optio obcaecati, quibusdam vitae non error tempore blanditiis at! Tenetur, reiciendis tempora!</p>
+            </article>
+            <article class="blog">
+                <h3 id="sec">blog-2</h3>
+                <p>Qui voluptatem possimus, ipsum repudiandae quam sequi odit cum quaerat accusantium velit dolore molestias delectus iure adipisci itaque illo, alias blanditiis officiis porro nam necessitatibus rerum! Laborum et illo impedit molestiae! Dolorum veritatis rerum vitae odit, voluptatibus saepe repellendus cumque autem nobis nostrum non totam tempora sapiente in quibusdam harum!</p>
+            </article>
+            <article class="blog">
+                <h3 id="thi">blog-3</h3>
+                <p>Quisquam hic culpa officiis rerum, amet repellat laudantium velit voluptatibus ducimus eum tenetur molestiae suscipit dolore sint perspiciatis iusto nostrum unde. Quisquam voluptates hic in totam. Quae suscipit ratione eius impedit ab dolorum quas quis velit voluptatum. Harum error minima veniam cumque molestiae necessitatibus asperiores esse excepturi labore, magni numquam.</p>
+            </article>
+            <article id="special-article">
+                <h3 id="fou">blog-4</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate suscipit voluptates aut debitis dolorum asperiores praesentium aspernatur illo quam nesciunt aliquid nam laboriosam inventore, facere eligendi, quas voluptas modi libero qui in repudiandae! Ab autem laudantium totam vel commodi earum excepturi dignissimos voluptatibus voluptates qui. Voluptas et quas modi quae.</p>
+            </article>
+        </section>
+
+        <section>
+            <ul id="f-list">
+                <li>fri-1</li>
+                <li>fri-2</li>
+                <li>fri-3</li>
+                <li>fri-4</li>
+                <li>fri-5</li>
+                <li>fri-6</li>
+                <li>fri-7</li>
+                <li>fri-8</li>
+            </ul>
+        </section>
+    </main>
+    
+
+
+
+
+
+
+    <script>
+        // console.log(55);
+        // console.log(document);
+
+/* 
+
+inspect-console:
+
+document.getElementById('fir').style.color = 'blue'
+"blue"
+document.getElementById('fir').style.backgroundColor = 'cadetblue'
+"cadetblue" 
+var sec = document.querySelectorAll('#sec')
+undefined
+var sec = document.querySelectorAll('.blog')
+undefined
+document.querySelectorAll('.blog')
+NodeList(3) [article.blog, article.blog, article.blog]
+var sec = document.getElementById('fir')
+undefined
+document.getElementById('fir')
+<h3 id=​"fir">​blog-1​</h3>
+var sec = document.getElementById('fir')
+undefined
+sec
+<h3 id=​"fir">​blog-1​</h3>
+sec.getAttribute('style')
+null
+sec.getAttribute('id')
+"fir"
+sec.setAttribute('title', 'frethtyjuy')
+undefined
+sec.parentNode
+<article class=​"blog">​…​</article>
+sec.parentNode.parentNode
+<section>​…​</section>
+sec.parentNode.parentNode.parentNode
+<main>​…​</main>
+sec.childNodes
+NodeList [text]
+
+inspect end        
+*/
+
+
+        // tag------------------
+        // var blogTitle = document.getElementsByTagName('h3');
+        // console.log(blogTitle);
+        // for (var h3 of blogTitle) {
+            // console.log(h3);
+            // console.log(h3.innerText);
+        // }
+        // var blogPara = document.getElementsByTagName('p');
+        // console.log(blogPara);
+        // for (var p of blogPara) {
+            // console.log(p);
+            // console.log(p.innerText);
+        // }
+
+        // id-----------
+        // var firId = document.getElementById('fir');
+        // firId.style.backgroundColor='cadetblue';
+        // var secId = document.getElementById('sec');
+        // secId.style.color='blue'
+        // secId.innerText='changed by js'
+
+        // class-------------------------
+        // var classes = document.getElementsByClassName('blog');
+        // console.log(classes);
+        // for (var getClass of classes) {
+            // console.log(getClass);
+            // getClass.style.color='blue';
+            // getClass.style.border='2px solid red';
+            // getClass.style.borderRadius='10px';
+            // getClass.style.margin='5px';
+            // getClass.style.padding='50px';
+        // }
+
+        // query selector -------------------------
+        // var specialArticle = document.querySelector('#special-article');
+        // console.log(specialArticle);
+        // specialArticle.style.color='white';
+        // specialArticle.style.backgroundColor='black';
+        // specialArticle.style.padding='20px';
+
+         // query selector all-------------------------
+        //  var blogging = document.querySelectorAll('.blog');
+        //  console.log(blogging)
+        // for (var blogs of blogging) {
+            // console.log(blogs)
+            // blogs.style.color='blue'
+        // }
+
+        // create Element by js-------------------
+        // create 
+        // var create = document.createElement('li');
+        // create.innerText='frthbyuujnutj'
+        // where adding created element
+        // var adding = document.getElementById('fir');
+        // append or add element
+        // adding.appendChild(create);
+
+
+        // var article = document.createElement('article');
+        // article.classList.add('blog');
+        // var h3 = document.createElement('h3');
+        // h3.innerText='asdf';
+        
+        // var p = document.createElement('p');
+        // p.innerText='edftryhuyjmiumnfrgyujiu,,mnhbhgffvvbjmiolhgvfrctyhik,ohuyjuiklo,bvggthjnik,.;,tgukol.';
+        // article.appendChild(h3);
+        // article.appendChild(p);
+
+        // var parent = document.getElementById('section');
+        // parent.appendChild(article);
+
+
+
+        // full Element add shortcut
+        // var article = document.createElement('article');
+        // article.classList.add('blog');
+        // article.innerHTML= `
+        // <h3> rythy </h3>
+        // <p>asdfghjkllpoiuyytrewqqzxvbnm,,. </p>
+        // `
+        // var parent = document.getElementById('section');
+        //     parent.appendChild(article);
+        
+    </script>
+
+    <script>
+
+        // remove
+        var friend = document.getElementById('f-list');
+        console.log(friend.children);
+        var deleteFri = friend.children[4];
+        console.log(deleteFri);
+        friend.removeChild(deleteFri);
+
+    </script>
+
+
+    <script src="try-1.js"></script>
+    <script src="try-2.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <style>
+        .cart {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        button {
+            color: whitesmoke;
+            cursor: pointer;
+        }
+
+        .add-btn {
+            background-color: #ff8800;
+            border: none;
+            padding: 3px 7px;
+        }
+
+        .add-btn:hover {
+            background-color: orange;
+        }
+
+        .place-order {
+            background-color: #00ff0d;
+            border: none;
+            padding: 3px 7px;
+        }
+
+        .place-order:hover {
+            background-color: #9dff00;
+        }
+
+        .delete-btn {
+            background-color: #ff1100c0;
+            border: none;
+            padding: 3px 7px;
+        }
+
+        .delete-btn:hover {
+            background-color: #ff4800c0;
+        }
+
+        .message-box {
+            position: absolute;
+            top: 42px;
+        }
+
+        #add-update {
+            color: green;
+        }
+
+        #complete-order{
+            color: sandybrown;
+        }
+
+        #delete {
+            color: red;
+        }
+
+        .pdList {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cart">
+        <h1>Products Cart</h1>
+        <p class="message-box">
+            <span id="add-update"></span>
+            <span id="delete"></span>
+            <span id="complete-order"></span>
+        </p>
+        <input type="text" id="product" placeholder="enter product name">
+        <input type="number" id="price" placeholder="enter product price">
+        <button onclick="addItem()" class="add-btn">add item</button>
+        <br>
+        <ul id="all-products">
+
+        </ul>
+        <br>
+        <button onclick="placeOrder()" class="place-order">place order</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

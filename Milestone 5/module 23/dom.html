@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my blog</h1>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h3 class="blog-title" id="fir-title">my blog -1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, adipisci harum velit eius beatae voluptatibus magni quis dolore rerum corporis quos, quasi molestias vitae doloribus minima, sint quisquam quae commodi quibusdam dicta repudiandae at officia. Qui doloribus praesentium eaque cumque, tempore voluptatem nobis cum blanditiis quibusdam quas hic rem quaerat.</p>
+            </article>
+            <article>
+                <h3 class="blog-title" id="sec-title">my blog -2</h3>
+                <p>Fugiat, commodi sed aliquam illo dolorem id, nulla, placeat dolore tempora quae in error? Magni, recusandae facere illum obcaecati dolore sit quis quas ipsam voluptatibus. Minima, expedita nulla commodi voluptate laboriosam magni officiis? Mollitia exercitationem itaque modi culpa! Omnis quidem quis aperiam cumque laboriosam dolores necessitatibus, fugiat ratione voluptates in!</p>
+            </article>
+            <article>
+                <h3 class="blog-title" id="thi-title">my blog -3</h3>
+                <p>Suscipit accusamus sint vitae culpa reprehenderit amet vel? Porro totam aliquid consequuntur alias quasi veniam officia, dolorum exercitationem, ipsam rem deserunt dicta eius architecto reprehenderit ea. Molestiae eos recusandae rem veritatis esse doloremque accusantium facere nostrum commodi, odit quia quos aperiam nobis consequuntur magni sunt nihil nisi distinctio est. Quam.</p>
+            </article>
+            <article>
+                <h3 id="fou-title">my blog -4</h3>
+                <p>Suscipit accusamus sint vitae culpa reprehenderit amet vel? Porro totam aliquid consequuntur alias quasi veniam officia, dolorum exercitationem, ipsam rem deserunt dicta eius architecto reprehenderit ea. Molestiae eos recusandae rem veritatis esse doloremque accusantium facere nostrum commodi, odit quia quos aperiam nobis consequuntur magni nihil nisi distinctio est. Quam.</p>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        // console.log(document);
+        // console.log(document.body)
+        var blogTitle = document.getElementsByTagName('h3');
+        // console.log(blogTitle);
+        for (var h3 of blogTitle) {
+            // console.log(h3.innerText);
+        }
+        var blog = document.getElementsByTagName('p')
+        // console.log(blog);
+        for (var p of blog) {
+            // p.style.backgroundColor = 'red'
+            // console.log(p.innerText);
+        }
+        var firstTitle = document.getElementById('fir-title');
+        // console.log(firstTitle);
+        firstTitle.style.color = 'blue';
+        var title = document.getElementsByClassName('blog-title');
+        for (var blog of title) {
+            blog.style.color = "blue";
+        }
+
+        // inspect
+        // var st = document.getElementById('sec-title')
+        //     st.getAttribute('id')
+        //     "sec-title"
+        //     st.getAttribute('class')
+        //     "blog-title"
+        //     st.getAttribute('style')
+        //     "color: blue;"
+
+        
+    </script>
+</body>
+</html>

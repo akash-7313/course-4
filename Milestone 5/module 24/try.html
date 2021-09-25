@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delegate & github like delete</title>
+</head>
+<body>
+    <!-- github like delete -->
+
+    <h3 id="text">Lorem ipsum dolor sit amet consectetur.</h3>
+    <input type="text" id="confirm" placeholder="type delete">
+    <button id="btn" disabled>delete</button>
+
+
+    <script>
+        // 
+        document.getElementById('btn').addEventListener('click', function() {
+            document.getElementById('text').style.display='none';
+        })
+
+        // focus
+        document.getElementById('confirm').addEventListener('focus', function() {
+            document.body.style.backgroundColor='red';
+        })
+
+        // blur
+        document.getElementById('confirm').addEventListener('blur', function() {
+            document.body.style.backgroundColor='white';
+        })
+
+
+        // keyup
+        document.getElementById('confirm').addEventListener('keyup', function(event) {
+            if (event.target.value=='delete') {
+                document.getElementById('btn').removeAttribute('disabled');
+            }
+            else{
+                document.getElementById('btn').setAttribute('disabled', true);
+            }
+        })
+
+        // change
+        document.getElementById('confirm').addEventListener('change', function(event) {
+            if (event.target.value=='delete') {
+                document.getElementById('btn').removeAttribute('disabled');
+            }
+            else{
+                document.getElementById('btn').setAttribute('disabled', true);
+            }
+        })
+
+
+    </script>
+</body>
+</html>
